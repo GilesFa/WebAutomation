@@ -1,0 +1,43 @@
+<!--設定utf-8編碼-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head
+
+<html>
+<form name="SSH Server" action="ssh-cmd.py" method="post">
+
+    請輸入伺服器IP : <br>
+    <input type="text" name="ip" value="">
+    <br>
+    <select name="ip">
+        <!--下拉式選單-->
+        <option value="">不選擇</option>
+        <option>192.168.0.5</option>
+        <option>192.168.0.86</option>
+
+    </select>
+    <br><br> 請輸要執行的命令 : <br>
+    <input type="text" name="cmd"><br>
+    <select name="cmd">
+        <!--下拉式選單-->
+        <option value="">不選擇</option>
+        <option value="ls">ls : 查看目錄的檔案</option>    
+        <option value="pwd">pwd : 查看當前所在路徑</option>
+        <option value="ip add">ip add : 查看ip</option>
+        <option value="ping 8.8.8.8 -c 4 -i 0.5">ping 8.8.8.8 -c 4: 檢查外網連線</option>
+        <option value="docker ps">docker ps : 查看docker狀態</option>
+        <option value="yum install sysstat -y && mpstat">mpstat : 查看cpu狀態</option>
+        <!-- <option>ls</option>
+        <option>pwd</option>
+        <option>whoami</option>
+        <option>ip add</option>
+        <option>docker ps</option> -->
+    </select>
+    <br>
+    <br>grep過濾: <br>
+    <input type="text" name="grep"><br>
+    <input type="submit" value="送出">
+</form>
+</html>
+
+
